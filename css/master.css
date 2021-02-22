@@ -9,6 +9,9 @@ body{
 
 }
 
+ul{
+  list-style: none;
+}
 .riga::after{
   content: "";
   display: table;
@@ -81,6 +84,52 @@ body{
   width: calc(100% - 200px);
   height: calc(100vh - 80px);
 }
+
+.upgrade{
+  background-color: #080B12;
+
+  height: 80px;
+}
+
+.music-nav{
+
+}
+
+.music-nav ul{
+  display: flex;
+
+  flex-flow: row wrap;
+  justify-content: center;
+  background-color: #141922;
+}
+
+
+.recently-played{
+
+}
+
+.recently-played ul{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+
+
+  text-align: center;
+}
+
+.recently-played ul li{
+  background-color: #412ee8;
+
+  flex: calc(100% / 6);
+  margin: 0 5px;
+}
+
+.recently-played ul li img{
+  width: 100%;
+  max-width: 150px;
+}
+
 
 /* ----------------------------------------- */
 
