@@ -23,9 +23,6 @@ body{
   height: 200px;
 
 }
-nav{
-  float: left;
-}
 
 .side-nav{
   float: left;
@@ -39,7 +36,7 @@ nav{
   float: left;
   background-color: lightblue;
 
-  width: calc(100vw - 200px);
+  width: calc(100% - 200px);
   height: calc(100vh - 80px);
 }
 
