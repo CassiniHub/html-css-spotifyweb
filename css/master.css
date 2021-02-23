@@ -203,21 +203,37 @@ a{
   float: left;
   background-color: lightblue;
 
-  overflow-y: auto;
-
   width: calc(100% - 200px);
   height: calc(100vh - 80px);
 }
 
 .upgrade{
-  background-color: #080B12;
-  opacity: 0.5;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  top: 0;
+  right: 0;
+  left: 0;
 
   height: 80px;
+
+  background-color: #080B12;
+}
+
+.upgrade-btn a{
+  color: white;
+
+  border: 1px solid white;
+  border-radius: 25px;
+
+  padding: 10px 20px;
 }
 
 .music-nav{
-
+  padding-top: 80px;
+  background-color: #141922;
 }
 
 .music-nav ul{
@@ -225,9 +241,41 @@ a{
 
   flex-flow: row wrap;
   justify-content: center;
+
   background-color: #141922;
+
+  padding: 20px 15px;
 }
 
+.music-nav ul li{
+  position: relative;
+  margin-right: 15px;
+}
+
+.music-nav ul li:hover:after{
+  content: "";
+  position: absolute;
+  display: block;
+
+  left: 50%;
+  transform: translateX(-50%);
+
+  height: 2px;
+  width: 30px;
+
+  border-bottom: 2px solid #B5FF31;
+}
+
+
+.music-nav ul li a{
+  color: #7E8085;
+  font-weight: 600;
+}
+
+.music-selection{
+  overflow-y: auto;
+  height: calc(100vh - 180px);
+}
 
 .recently-played{
 
@@ -238,7 +286,6 @@ a{
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: flex-start;
-
 
   text-align: center;
 }
