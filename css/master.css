@@ -3,10 +3,16 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+html{
+  font-size: 12px;
 }
 
 body{
-
+  font-family: 'Lato', sans-serif;
 }
 
 ul{
@@ -15,6 +21,7 @@ ul{
 
 a{
   text-decoration: none;
+  color: #A3A3A3;
 }
 
 .riga::after{
@@ -63,12 +70,14 @@ a{
 /* nav-bar */
 .nav-bar ul{
   background-color: black;
-
-  height: 100px;
 }
 
 .nav-bar ul li {
   padding: 3px 0 3px 15px;
+}
+
+.nav-bar ul li:hover{
+  border-left: 2px solid lime;
 }
 
 .nav-bar ul li a{
@@ -76,36 +85,114 @@ a{
   align-items: center;
 }
 
-.nav-bar ul li:hover{
-  border-left: 2px solid lime;
-}
-
 .nav-bar ul li img{
   height: 20px;
+
+  margin-right: 5px;
 }
 
 /* playlist */
 .playlist{
-  overflow-y: auto;
-
   height: calc(100% - 250px);
+  padding-left: 15px;
+  margin-top: 15px;
 }
 
-.playlist ul{
-  background-color: #fc5dad;
+.playlist h3{
+  font-size: 1rem;
+  color: white;
+
+  margin-bottom: 5px;
+}
+
+.create-playlist{
+  margin-top: 5px;
+}
+
+.create-playlist a{
+  color: white;
+  font-size: 1.1rem;
+}
+
+.create-playlist .fa-plus{
+  color: black;
+  background-color: #A3A3A3;
+
+  padding: 8px;
+  margin-right: 5px;
+}
+
+.playlist-list{
+  overflow-y: auto;
+  height: 100%;
+}
+
+.playlist-list ul{
+  color: #A3A3A3;
+  background-color: black;
+}
+
+.playlist-list ul li{
+  font-size: 0.8rem;
+
+  margin-top: 12px;
+  margin-bottom: 12px;
 }
 
 /* install-app */
 .install-app{
   position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 
-  background-color: red;
+  background-color: black;
 
   bottom: 0;
   left: 0;
 
   height: 70px;
   width: 100%;
+
+  padding: 0 10px;
+}
+
+.install-app .install,
+.install-app .username,
+.install-app hr{
+  flex: 100%;
+}
+
+.install-app .install a,
+.install-app .username a{
+  display: flex;
+  align-items: center;
+}
+
+.install-app .install a{
+  font-size: 1rem;
+}
+
+.install-app .install a img{
+  height: 15px;
+
+  margin-right: 10px;
+}
+
+.install-app .username a{
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+}
+
+.install-app .username a img{
+  background-color: #808080;
+  border-radius: 50%;
+
+  height: 30px;
+  width: 30px;
+
+  margin-right: 10px;
 }
 
 /* ----------------------------------------- */
