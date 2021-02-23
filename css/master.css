@@ -12,6 +12,11 @@ body{
 ul{
   list-style: none;
 }
+
+a{
+  text-decoration: none;
+}
+
 .riga::after{
   content: "";
   display: table;
@@ -34,24 +39,52 @@ ul{
   position: relative;
 
   float: left;
-  background-color: pink;
+  background-color: black;
 
   width: 200px;
   height: calc(100vh - 80px);
+  min-height: 300px;
 }
 
+/* logo */
 .logo{
-  background-color: #fc5dad;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 
   height: 80px;
+  padding-left: 15px;
 }
 
+.logo img{
+  width: 70%;
+}
+
+/* nav-bar */
 .nav-bar ul{
-  background-color: #bd42ed;
+  background-color: black;
 
   height: 100px;
 }
 
+.nav-bar ul li {
+  padding: 3px 0 3px 15px;
+}
+
+.nav-bar ul li a{
+  display: flex;
+  align-items: center;
+}
+
+.nav-bar ul li:hover{
+  border-left: 2px solid lime;
+}
+
+.nav-bar ul li img{
+  height: 20px;
+}
+
+/* playlist */
 .playlist{
   overflow-y: auto;
 
@@ -62,6 +95,7 @@ ul{
   background-color: #fc5dad;
 }
 
+/* install-app */
 .install-app{
   position: absolute;
 
@@ -78,8 +112,11 @@ ul{
 
 /* MUSIC */
 .music{
+  position: relative;
   float: left;
   background-color: lightblue;
+
+  overflow-y: auto;
 
   width: calc(100% - 200px);
   height: calc(100vh - 80px);
@@ -87,6 +124,7 @@ ul{
 
 .upgrade{
   background-color: #080B12;
+  opacity: 0.5;
 
   height: 80px;
 }
@@ -135,9 +173,12 @@ ul{
 
 /* PLAYER */
 .player{
-  float: left;
+  position: absolute;
+  z-index: 1000;
+
   background-color: grey;
 
+  bottom: 0;
   width: 100%;
   height: 80px;
 }
