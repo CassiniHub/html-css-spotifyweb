@@ -77,7 +77,7 @@ a{
 }
 
 .nav-bar ul li:hover{
-  border-left: 2px solid lime;
+  border-left: 2px solid #B5FF31;
 }
 
 .nav-bar ul li a{
@@ -195,7 +195,9 @@ a{
   margin-right: 10px;
 }
 
+
 /* ----------------------------------------- */
+
 
 /* MUSIC */
 .music{
@@ -207,6 +209,7 @@ a{
   height: calc(100vh - 80px);
 }
 
+/* upgrade */
 .upgrade{
   position: absolute;
   display: flex;
@@ -220,6 +223,8 @@ a{
   height: 80px;
 
   background-color: #080B12;
+
+  padding: 0 15px;
 }
 
 .upgrade-btn a{
@@ -231,6 +236,7 @@ a{
   padding: 10px 20px;
 }
 
+/* music-nav */
 .music-nav{
   padding-top: 80px;
   background-color: #141922;
@@ -266,19 +272,49 @@ a{
   border-bottom: 2px solid #B5FF31;
 }
 
-
 .music-nav ul li a{
   color: #7E8085;
   font-weight: 600;
 }
 
+/* music selction */
 .music-selection{
   overflow-y: auto;
-  height: calc(100vh - 180px);
+  height: calc(100vh - 215px);
+
+  background-color: #141922;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.music-selection h2{
+  color: white;
 }
 
 .recently-played{
+  margin-bottom: 25px;
+}
 
+.recently-played .section-subtitle{
+  margin-top: 5px;
+  color: #7E8085;
+}
+
+.recently-played .music-card h4,
+.recently-played .music-card h5{
+  text-align: center;
+
+  max-width: 150px;
+}
+
+.recently-played .music-card h4{
+  color: white;
+  margin-top: 8px;
+  margin-bottom: 5px;
+}
+
+.recently-played .music-card h5{
+  color: #7E8085;
 }
 
 .recently-played ul{
@@ -286,24 +322,79 @@ a{
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: flex-start;
-
-  text-align: center;
 }
 
 .recently-played ul li{
-  background-color: #412ee8;
+  /* background-color: #412ee8; */
 
   flex: calc(100% / 6);
   margin: 0 5px;
 }
 
-.recently-played ul li img{
+.recently-played ul li:first-child{
+  margin-left: 0;
+}
+
+.recently-played ul li img,
+.created-for ul li img,
+.artists ul li img{
   width: 100%;
   max-width: 150px;
+
+  margin-top: 15px;
+}
+
+/* created for */
+.created-for{
+  margin-bottom: 15px;
+}
+
+.section-subtitle{
+  color: #7E8085;
+}
+
+.created-for ul{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.created-for ul li{
+  margin: 0 5px;
+}
+
+.created-for ul li h4{
+  text-align: center;
+  color: white;
+}
+
+/* artists */
+.artists ul{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.artists ul li{
+  margin: 0 5px;
+}
+
+.artists ul li img{
+  border-radius: 50%;
+}
+
+.artists ul li h4{
+  text-align: center;
+  color: white;
+
+  margin-bottom: 30px;
 }
 
 
 /* ----------------------------------------- */
+
 
 /* PLAYER */
 .player{
