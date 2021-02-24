@@ -27,14 +27,15 @@
         <div class="side-nav">
 
           <div class="logo">
-            <img src="img/logo.svg" alt="">
+            <img id="logo-big" src="img/logo.svg" alt="">
+            <img id="logo-small" src="img/logo-small.svg" alt="">
           </div>
 
           <div class="nav-bar">
             <ul>
-              <li><a href="#"><img src="img/home.svg" alt=""> <span>Home</span></a></li>
-              <li><a href="#"><img src="img/search.svg" alt=""> <span>Cerca</span></a></li>
-              <li><a href="#"><img src="img/libreria.svg" alt=""> <span>La tua libreia</span></a></li>
+              <li><a href="#"><img src="img/home.svg" alt=""> <span class="sm-none">Home</span></a></li>
+              <li><a href="#"><img src="img/search.svg" alt=""> <span class="sm-none">Cerca</span></a></li>
+              <li><a href="#"><img src="img/libreria.svg" alt=""> <span class="sm-none">La tua libreia</span></a></li>
             </ul>
           </div>
 
@@ -68,11 +69,11 @@
 
           <div class="install-app">
             <div class="install">
-              <a href="#"><img src="img/download.svg" alt=""> installa app</a>
+              <a href="#"><img src="img/download.svg" alt=""><span class="sm-none">installa app</span></a>
             </div>
-            <hr>
+            <hr class="sm-none">
             <div class="username">
-              <a href="#"><img src="img/profile.svg" alt=""> John Doe</a>
+              <a href="#"><img src="img/profile.svg" alt=""><span class="sm-none">John Doe</span></a>
             </div>
           </div>
         </div>
@@ -112,6 +113,14 @@
                   <img src="img/metal_lifting.jpg" alt="">
                   <h4>Heavy Metal</h4>
                   <h5>Subtitle</h5>
+
+                  <div class="overlay">
+
+                  </div>
+                  <div class="overlay-play">
+
+                  </div>
+
                 </li>
                 <li class="music-card">
                   <img src="img/stranger.jpeg" alt="">
@@ -184,7 +193,11 @@
           </div>
         </div>
 
+        <!-- --------------------------------- -->
+
+        <!-- PLAYER -->
         <div class="player">
+
           <div class="current-song">
             <div class="current-album">
               <img src="img/sinister.jpeg" alt="">
@@ -213,6 +226,9 @@
             <div class="down-music-player">
               <span class="time">0:25</span>
               <div class="music-player-bar">
+                <div class="time-point-bar">
+
+                </div>
                 <div class="highlighted-bar">
 
                 </div>
@@ -230,8 +246,17 @@
             <a href="#"><i class="fas fa-volume-up"></i></a>
 
             <div class="volume-bar">
+              <div class="volume-point-bar">
 
+              </div>
+              <div class="highlighted-bar">
+
+              </div>
+              <div class="point-bar">
+
+              </div>
             </div>
+
           </div>
         </div>
 

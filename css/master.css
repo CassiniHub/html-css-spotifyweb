@@ -39,7 +39,9 @@ a{
 
 }
 
+
 /* ----------------------------------------- */
+
 
 /* NAVBAR */
 .side-nav{
@@ -63,7 +65,13 @@ a{
   padding-left: 15px;
 }
 
-.logo img{
+.logo img#logo-big{
+  display: block;
+  width: 70%;
+}
+
+.logo img#logo-small{
+  display: none;
   width: 70%;
 }
 
@@ -325,9 +333,7 @@ a{
 }
 
 .recently-played ul li{
-  /* background-color: #412ee8; */
-
-  flex: calc(100% / 6);
+  width: calc(100% / 6);
   margin: 0 5px;
 }
 
@@ -413,6 +419,8 @@ a{
   bottom: 0;
   width: 100%;
   height: 80px;
+
+  padding: 0 10px;
 }
 
 /* current song */
@@ -424,7 +432,6 @@ a{
   align-content: center;
 
   width: 200px;
-  padding: 0 10px;
 }
 
 .player .current-song .current-album{
@@ -437,6 +444,8 @@ a{
 
 .player .current-song .current-artist{
   flex-grow: 1;
+
+  margin-right: 10px;
 }
 
 .player .current-song .current-artist h4{
@@ -469,6 +478,8 @@ a{
 
   width: 100%;
   max-width: 450px;
+
+  margin: 0 10px;
 }
 
 /* top-player */
@@ -479,6 +490,10 @@ a{
 
   font-size: 1.2rem;
   margin-bottom: 10px;
+}
+
+.top-music-player a{
+  color: white;
 }
 
 .top-music-player a .fa-play-circle{
@@ -518,6 +533,21 @@ a{
   margin: 0 15px;
 }
 
+.music-player-bar .time-point-bar{
+  position: absolute;
+  z-index: 1;
+
+  display: block;
+
+  left: 0;
+
+  height: 4px;
+  width: 25%;
+
+  border-radius: 25px;
+  background-color: #BCBCBC;
+}
+
 .music-player-bar:hover .highlighted-bar{
   position: absolute;
   z-index: 2;
@@ -540,7 +570,7 @@ a{
   display: block;
 
   left: 25%;
-  transform: translateY(-25%);
+  transform: translateY(-25%) translateX(-6px);
 
   width: 12px;
   height: 12px;
@@ -563,24 +593,191 @@ a{
   height: 4px;
   min-width: 80px;
   width: 100%;
+}
 
+.volume .fa-volume-up{
   margin: 0 15px;
 }
 
+.volume .fa-list{
+  margin-right: 15px;
+}
+
+.volume .volume-point-bar{
+  position: absolute;
+  z-index: 1;
+
+  display: block;
+
+  left: 0;
+
+  height: 4px;
+  width: 25%;
+
+  border-radius: 25px;
+  background-color: #BCBCBC;
+}
+
+.volume-bar:hover .highlighted-bar{
+  position: absolute;
+  z-index: 2;
+
+  display: block;
+
+  left: 0;
+
+  height: 4px;
+  width: 25%;
+
+  border-radius: 25px;
+  background-color: #B5FF31;
+}
+
+.volume-bar:hover .point-bar{
+  position: absolute;
+  z-index: 3;
+
+  display: block;
+
+  left: 25%;
+  transform: translateY(-25%) translateX(-6px);
+
+  width: 12px;
+  height: 12px;
+
+  border-radius: 50%;
+  background-color: white;
+}
 /* ----------------------------------------- */
 
 /* XS */
 @media all and (max-width: 575px) {
+  /* NAVBAR */
+  .side-nav{
+    width: 50px;
+  }
 
+  /* logo */
+  .logo{
+    align-items: center;
+    justify-content: center;
+
+    height: 60px;
+
+    padding-left: 0;
+  }
+  .logo img#logo-big{
+    display: none;
+    width: 70%;
+  }
+
+  .logo img#logo-small{
+    display: block;
+    width: 55%;
+  }
+
+  /* nav-bar */
+  .sm-none{
+    display: none;
+  }
+
+  /* playlist */
+  .playlist{
+    display: none;
+  }
+
+  /* install-app */
+  .install-app{
+    justify-content: center;
+  }
+
+  .install-app .install,
+  .install-app .username{
+    display: flex;
+    justify-content: center;
+  }
+
+  .install-app .install a{
+    width: 15px;
+    height: 15px;
+  }
+
+  .install-app .install a img{
+    margin-right: 0;
+  }
+  .install-app .username a img{
+    margin-right: 0;
+
+    width: 20px;
+    height: 20px;
+  }
+
+  /* MUSIC */
+  .music{
+    width: calc(100% - 50px);
+  }
+
+  .recently-played ul{
+    flex-flow: row wrap;
+    justify-content: flex-start;
+  }
+
+  .recently-played ul li{
+    width: calc((100% - 20px) / 2);
+  }
+
+  .recently-played ul li:nth-child(even){
+    margin-right: 0;
+    margin-left: 10px;
+  }
+
+  .recently-played ul li:nth-child(odd){
+    margin-right: 10px;
+    margin-left: 0px;
+  }
 }
 
 /* SM */
 @media all and (min-width: 576px) and (max-width: 767px){
 
+  /* MUSIC */
+  .recently-played ul{
+    flex-flow: row wrap;
+    justify-content: flex-start;
+  }
+
+  .recently-played ul li{
+    width: calc((100% - 20px) / 2);
+  }
+
+  .recently-played ul li:nth-child(even){
+    margin-right: 0;
+    margin-left: 10px;
+  }
+
+  .recently-played ul li:nth-child(odd){
+    margin-right: 10px;
+    margin-left: 0px;
+  }
 }
 
 /* MD */
 @media all and (min-width: 768px) and (max-width: 991px){
+
+  /* MUSIC */
+  .recently-played ul{
+    flex-flow: row wrap;
+    justify-content: flex-start;
+  }
+
+  .recently-played ul li{
+    width: calc((100% - 30px) / 4);
+    margin: 0 5px;
+  }
+
+  .recently-played ul li:nth-child(4){
+    margin-right: 0;
+  }
 
 }
 
