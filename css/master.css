@@ -399,15 +399,66 @@ a{
 /* PLAYER */
 .player{
   position: absolute;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+
   z-index: 1000;
 
-  background-color: grey;
+  background-color: #282828;
 
   bottom: 0;
   width: 100%;
   height: 80px;
 }
 
+.player .current-song{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+
+  width: 200px;
+  padding: 0 10px;
+}
+
+.player .current-song .current-album{
+  margin-right: 10px;
+}
+
+.player .current-song .current-album img{
+  width: 40px;
+}
+
+.player .current-song .current-artist{
+  flex-grow: 1;
+}
+
+.player .current-song .current-artist h4{
+  color: white;
+}
+
+.player .current-song .current-artist h6{
+  color: #7E8085;
+}
+
+.player .current-song .current-icons{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+
+  font-size: 1.2rem;
+}
+
+.player .current-song .current-icons a:first-child{
+  margin-right: 10px;
+}
 /* ----------------------------------------- */
 
 /* XS */
