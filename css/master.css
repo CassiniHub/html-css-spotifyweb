@@ -549,6 +549,24 @@ a{
   background-color: white;
 }
 
+.volume{
+  display: flex;
+  align-items: center;
+}
+
+.volume-bar{
+  position: relative;
+  background-color: #5B5B5B;
+
+  border-radius: 25px;
+
+  height: 4px;
+  min-width: 80px;
+  width: 100%;
+
+  margin: 0 15px;
+}
+
 /* ----------------------------------------- */
 
 /* XS */
