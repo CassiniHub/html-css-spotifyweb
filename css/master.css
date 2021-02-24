@@ -723,7 +723,8 @@ a{
   }
 
   .recently-played ul li{
-    width: calc((100% - 20px) / 2);
+    width: calc(50% - 20px);
+    flex-grow: 0;
   }
 
   .recently-played ul li:nth-child(even){
