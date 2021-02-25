@@ -25,12 +25,6 @@ a{
   color: #A3A3A3;
 }
 
-.riga::after{
-  content: "";
-  display: table;
-  clear: both;
-}
-
 
 /* ----------------------------------------- */
 
@@ -93,6 +87,10 @@ main nav.side-nav{
   align-items: center;
 }
 
+.nav-bar ul li a:hover{
+  color: white;
+}
+
 .nav-bar ul li img{
   height: 20px;
 
@@ -119,8 +117,7 @@ main nav.side-nav{
 }
 
 .create-playlist{
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin: 5px 0;
 }
 
 .create-playlist a{
@@ -156,11 +153,14 @@ main nav.side-nav{
 }
 
 .playlist-list ul li{
-
   font-size: 0.8rem;
 
   margin-top: 12px;
   margin-bottom: 12px;
+}
+
+.playlist-list ul li a:hover{
+  color: white;
 }
 
 /* install-app */
@@ -195,6 +195,10 @@ main nav.side-nav{
 
 .install-app .install a{
   font-size: 1rem;
+}
+
+.install-app .install a:hover{
+  color: white;
 }
 
 .install-app .install a img{
@@ -258,6 +262,10 @@ main nav.side-nav{
   padding: 10px 20px;
 }
 
+.upgrade-btn a:hover{
+  font-size: 1.2rem;
+}
+
 /* music-nav */
 .music-nav{
   padding-top: 80px;
@@ -299,6 +307,10 @@ main nav.side-nav{
   font-weight: 600;
 }
 
+.music-nav ul li a:hover{
+  color: white;
+}
+
 /* music selction */
 .music-selection{
   flex-grow: 1;
@@ -312,8 +324,10 @@ main nav.side-nav{
   color: white;
 }
 
-.musi-card{
+.music-card .img-wrapper{
   position: relative;
+
+  margin-top: 15px;
 }
 
 .music-card h4,
@@ -331,6 +345,8 @@ main nav.side-nav{
 
 .overlay{
   position: absolute;
+  display: none;
+  z-index: 1;
 
   top: 0;
   left: 0;
@@ -339,6 +355,24 @@ main nav.side-nav{
   width: 100%;
 
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+.overlay-play{
+  position: absolute;
+  display: none;
+  z-index: 2;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-size: 3rem;
+  color: white;
+}
+
+.img-wrapper:hover .overlay,
+.img-wrapper:hover .overlay-play{
+  display: block;
 }
 
 .subtitle{
@@ -368,7 +402,9 @@ main nav.side-nav{
   margin: 0 5px;
 }
 
-.recently-played ul li:first-child{
+.recently-played ul li:first-child,
+.created-for ul li:first-child,
+.artists ul li:first-child{
   margin-left: 0;
 }
 
@@ -377,8 +413,6 @@ main nav.side-nav{
 .artists ul li img{
   width: 100%;
   max-width: 150px;
-
-  margin-top: 15px;
 }
 
 /* artists */
@@ -646,8 +680,8 @@ main nav.side-nav{
 /* XS */
 @media all and (max-width: 575px) {
   /* NAVBAR */
-  .side-nav{
-    width: 50px;
+  main nav.side-nav{
+    width: 54px;
   }
 
   /* logo */
@@ -670,6 +704,14 @@ main nav.side-nav{
   }
 
   /* nav-bar */
+  .nav-bar{
+    flex-grow: 1;
+  }
+
+  .nav-bar ul li img{
+    margin-right: 0;
+  }
+
   .sm-none{
     display: none;
   }
@@ -710,24 +752,9 @@ main nav.side-nav{
     width: calc(100% - 50px);
   }
 
-  .recently-played ul{
-    flex-flow: row wrap;
-    justify-content: flex-start;
-  }
-
-  .recently-played ul li{
-    width: calc(50% - 20px);
-    flex-grow: 0;
-  }
-
-  .recently-played ul li:nth-child(even){
-    margin-right: 0;
-    margin-left: 10px;
-  }
-
-  .recently-played ul li:nth-child(odd){
-    margin-right: 10px;
-    margin-left: 0px;
+  .music-nav ul{
+    height: 100px;
+    align-content: space-between;
   }
 }
 
@@ -735,23 +762,9 @@ main nav.side-nav{
 @media all and (min-width: 576px) and (max-width: 767px){
 
   /* MUSIC */
-  .recently-played ul{
-    flex-flow: row wrap;
-    justify-content: flex-start;
-  }
-
-  .recently-played ul li{
-    flex-grow: 0 1 auto;
-  }
-
-  .recently-played ul li:nth-child(even){
-    margin-right: 0;
-    margin-left: 10px;
-  }
-
-  .recently-played ul li:nth-child(odd){
-    margin-right: 10px;
-    margin-left: 0px;
+  .music-nav ul{
+    height: 100px;
+    align-content: space-between;
   }
 }
 
@@ -759,20 +772,10 @@ main nav.side-nav{
 @media all and (min-width: 768px) and (max-width: 991px){
 
   /* MUSIC */
-  .recently-played ul{
-    flex-flow: row wrap;
-    justify-content: flex-start;
+  .music-nav ul{
+    height: 100px;
+    align-content: space-between;
   }
-
-  .recently-played ul li{
-    width: calc((100% - 30px) / 4);
-    margin: 0 5px;
-  }
-
-  .recently-played ul li:nth-child(4){
-    margin-right: 0;
-  }
-
 }
 
 /* LG */
