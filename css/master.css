@@ -385,7 +385,12 @@ main nav.side-nav{
   margin-bottom: 25px;
 }
 
-.recently-played ul,
+.recently-played ul{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
 .created-for ul,
 .artists ul{
   display: flex;
@@ -394,7 +399,10 @@ main nav.side-nav{
   overflow-x: auto;
 }
 
-.recently-played ul li,
+.recently-played ul li{
+  flex-grow: 1 1 auto;
+}
+
 .created-for ul li,
 .artists ul li{
   flex: 0 0 auto;
@@ -759,7 +767,7 @@ main nav.side-nav{
 }
 
 /* SM */
-@media all and (min-width: 576px) and (max-width: 767px){
+@media all and (min-width: 576px) and (max-width: 788px){
 
   /* MUSIC */
   .music-nav ul{
@@ -769,12 +777,19 @@ main nav.side-nav{
 }
 
 /* MD */
-@media all and (min-width: 768px) and (max-width: 991px){
+@media all and (min-width: 789px) and (max-width: 991px){
 
   /* MUSIC */
-  .music-nav ul{
-    height: 100px;
-    align-content: space-between;
+
+  /* recently-played */
+  .recently-played ul{
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    justify-content: flex-start;
+  }
+
+  .recently-played ul li{
+    flex: 1 1 25%;
   }
 }
 
