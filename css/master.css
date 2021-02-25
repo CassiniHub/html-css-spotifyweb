@@ -327,6 +327,8 @@ main nav.side-nav{
 .music-card .img-wrapper{
   position: relative;
 
+  max-width: 150px;
+
   margin-top: 15px;
 }
 
@@ -352,6 +354,7 @@ main nav.side-nav{
   left: 0;
 
   height: 100%;
+  max-height: 150px;
   width: 100%;
 
   background-color: rgba(0, 0, 0, 0.3);
@@ -401,6 +404,8 @@ main nav.side-nav{
 
 .recently-played ul li{
   flex-grow: 1 1 auto;
+
+  padding: 0 5px;
 }
 
 .created-for ul li,
@@ -686,7 +691,7 @@ main nav.side-nav{
 /* ----------------------------------------- */
 
 /* XS */
-@media all and (max-width: 575px) {
+@media all and (max-width: 500px) {
   /* NAVBAR */
   main nav.side-nav{
     width: 54px;
@@ -777,7 +782,7 @@ main nav.side-nav{
 }
 
 /* SM */
-@media all and (min-width: 576px) and (max-width: 788px){
+@media all and (min-width: 500px) and (max-width: 788px){
 
   /* MUSIC */
   .music-nav ul{
@@ -794,8 +799,6 @@ main nav.side-nav{
   .recently-played ul li{
     flex: 0 1 50%;
   }
-
-
 }
 
 /* MD */
